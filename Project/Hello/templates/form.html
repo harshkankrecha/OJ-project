@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <title>Submit</title>
+  <head> </head>
+  <body>
+    <p>This is the submission page</p>
+    <form method="POST" action="/search">
+        {% csrf_token %}
+        <input type="text" name="textfield" width="80" height="80">
+        
+        <button type="submit">Submit Code</button>
+    </form>
+  </body>
+</html>
+
+
+

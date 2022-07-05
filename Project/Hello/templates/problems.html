@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head> </head>
+  
+  <body>
+    {% for question in question_number %}
+    
+    <p><a href="{% static 'sort.html' %}">{{ question.question_name }}<a/></p>
+    
+    {% endfor %}
+
+
+
+    <p>This is problems page</p>
+
+  </body>
+</html>

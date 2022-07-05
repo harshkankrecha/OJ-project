@@ -1,0 +1,28 @@
+.heading{
+    color:orangered;
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: aquamarine;
+    text-decoration: solid;
+}
+
+.paragraph{
+    
+    color:rgb(254, 192, 255);
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: aquamarine;
+    text-decoration: solid;
+    
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.651);
+    background-size: cover;
+    height: 100vh;
+}
+.navbar-image{
+    width:60px;
+    height:60px
+}
