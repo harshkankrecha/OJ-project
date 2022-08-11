@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/home.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        body{
+            background:#f2f2f2;
+        }
+
+        .payment
+        {
+            border:1px solid #f2f2f2;
+            height:280px;
+            border-radius:20px;
+            background:#fff;
+        }
+        .payment_header
+        {
+        background:#87CEFA;
+        padding:20px;
+        border-radius:20px 20px 0px 0px;
+        
+        }
+
+        .check
+        {
+        margin:0px auto;
+        width:50px;
+        height:50px;
+        border-radius:100%;
+        background:#fff;
+        text-align:center;
+        }
+
+        .check i
+        {
+        vertical-align:middle;
+        line-height:50px;
+        font-size:30px;
+        }
+
+        .content 
+        {
+            text-align:center;
+        }
+
+        .content  h1
+        {
+            font-size:25px;
+            padding-top:25px;
+        }
+
+        .content a
+        {
+            width:200px;
+            height:35px;
+            color:#fff;
+            border-radius:30px;
+            padding:5px 10px;
+            background:#87CEFA;
+            transition:all ease-in-out 0.3s;
+        }
+
+        .content a:hover
+        {
+            text-decoration:none;
+            background:#000;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row">
+           <div class="col-md-6 mx-auto mt-5">
+              <div class="payment">
+                 <div class="payment_header">
+                    <div class="check">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                            <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z"/>
+                        </svg>
+                    </div>
+                 </div>
+                 <div class="content">
+                    <h2>Hey {{first_name}}</h2>
+                    <p>You have selected the {{plan_name}} plan for &#x20b9; {{plan_price}}</p>
+                    
+                 </div>
+                 
+              </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <form action="success" method="post">
+            {%csrf_token%}
+            <h2>Pay Now</h2>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_51LV77tSEDf9fZdfIEMWVrkUcqr21dg9Iu5hhJvaxuv3EEi4v4SU21Nodf49cpv5oJ4xg5d6jRo120aZhvp4hsXKc00urHNXxyV"
+                data-description="SILVER GYM"
+                data-amount={{plan_price2}}
+                data-locale="auto">
+            </script>
+        </form>
+
+    
+    </div>
+</body>
+</html>

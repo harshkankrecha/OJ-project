@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head> 
+        <link rel="stylesheet" type="text/css" href="static/registerstyle.css"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        
+</head>
+<body>
+
+    {% for message in messages %}    
+    <div style="text-align:center";"margin-top:20px";"background-color:lightred";>
+        <p style="color:red";"font-size:22px";"background-color:white";>{{ message }}</p>       
+            
+    </div>
+    {% endfor %}
+
+    <div class="registration-form">
+        <form action='register' method='post'>
+            {%csrf_token%}
+            <p class="form-icon">
+                <span><i class="icon icon-user"></i></span>
+            </p>
+            <p class="form-group">
+                <input type="text" class="form-control item" placeholder="Firstname" name="first_name">
+            </p>
+            <p class="form-group">
+                <input type="text" class="form-control item" placeholder="Lastname" name="last_name">
+            </p>
+            <p class="form-group">
+                <input type="email" class="form-control item" placeholder="Email" name="email">
+            </p>
+            
+            
+            <p class="form-group ml-3">
+                Gender :
+                <label class='gender-btn'><input type="radio" name="gender" value="male" /> Male</label>
+                <label class='gender-btn ml-5'><input type="radio" name="gender" value="female" /> Female</label>
+                <label class='gender-btn ml-5'><input type="radio" name="gender" value="others" /> Others</label>
+            </p>
+            <p class="form-group">
+                <input type="number" class="form-control item" placeholder="Current Weight" name="cweight" min=20>
+            </p>
+            <p class="form-group">
+                <input type="number" class="form-control item" placeholder="Goal Weight" name="gweight" min=20>
+            </p>
+            <p class="form-group">
+                <input type="number" class="form-control item" placeholder="BMI" name="bmi" min=1>
+            </p>
+            <p class="form-group">
+                <input type="number" class="form-control item" placeholder="Age" name="age" min=10>
+            </p>
+            <p class="form-group">
+            <label class='ml-3'>
+                Address :
+                <br />
+                <textarea name="address" cols="57" rows="3"></textarea>
+                </label>
+            </p>
+            <p class="form-group">
+                <a href='subscription'>
+                    <button type="submit" class="btn btn-block create-account">Submit</button>
+                </a>
+            </p>
+        </form>
+        
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="static/script.js"></script>
+    
+        
+
+
+        
+</body>
+</html>
+
+    
+

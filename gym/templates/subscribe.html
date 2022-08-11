@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/subscribestyle.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="demo-wrap">  
+        <div class="demo-header">
+          <h1>Subscription Plans</h1>
+          
+        </div>
+      
+      
+        <!-- PRICING PLANS -->
+        <section class="pricing-plans">
+          <!-- Pricing Tables -->
+          <div class="pricing-tables">
+            <!-- Plan Features -->
+           
+            <!-- "Basic" Plan -->
+            <div class="pricing-plan">
+              <h2 class="plan-title" value="basic" name="plan_name">Basic</h2>
+              <div class="plan-cost">
+                <p class="plan-price"> &#x20b9; 1499 </p>
+                <span>|</span> 
+                <p class="plan-type">Monthly</p>
+              </div>
+              <ul class="plan-features">
+                <li>Body-Building</li>
+                <li>High-quality Equipments</li>
+                <li>Training for 2 hours</li>
+                <li><span>Personal Trainer</span></li>
+                <li><span>AI enabled performance analysis</span></li>
+                
+              </ul>
+              <form action="payment/" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="plan_name" value="basic">            
+                
+                <input type="submit" value="Select Plan">
+              </form>
+            </div>
+            <!-- "Premium" Plan -->
+            <div class="pricing-plan featured-plan">
+              <div class="featured-ribbon">Best Value</div>
+              <h2 class="plan-title" value="premium" name="plan_name">Premium</h2>
+              <div class="plan-cost">
+                <p class="plan-price"> &#x20b9; 2199 </p>
+                <span>/</span> 
+                <p class="plan-type">Monthly</p>
+              </div>
+              <ul class="plan-features">
+                <li>Body-Building & Cardio</li>
+                <li>High-quality Equipments</li>
+                <li>Training for 4 hours</li>
+                <li><span>Personal Trainer</span></li>
+                <li><span>AI enabled performance analysis</span></li>
+              </ul>
+              <form action="payment/" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="plan_name" value="premium">            
+                
+                <input type="submit" value="Select Plan">
+              </form>
+            </div>
+            <!-- "Ultmate" Plan -->
+            <div class="pricing-plan">
+              <h2 class="plan-title">Ultimate</h2>
+              <div class="plan-cost">
+                <p class="plan-price"> &#x20b9; 3599 </p>
+                <span>/</span> 
+                <p class="plan-type">Monthly</p>
+              </div>
+              <ul class="plan-features">
+                <li>Body-Building & Cardio</li>
+                <li>High-quality Equipments</li>
+                <li>Unlimited Training </li>
+                <li>Personal Trainer</li>
+                <li>AI enabled performance analysis</li>
+              </ul>
+              <form action="payment/" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="plan_name" value="ultimate">            
+                
+                <input type="submit" value="Select Plan">
+              </form>
+            </div>
+          </div>
+        </section>
+    </div>
+    
+</body>
+</html>

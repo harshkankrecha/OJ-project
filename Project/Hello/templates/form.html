@@ -4,11 +4,12 @@
   <head> </head>
   <body>
     <p>This is the submission page</p>
-    <form method="POST" action="/search">
-        {% csrf_token %}
-        <input type="text" name="textfield" width="80" height="80">
+    <form method="POST" action="/submit">
+      {% csrf_token %}
         
-        <button type="submit">Submit Code</button>
+      <input type="file" id="myFile" name="file">
+      <input type="submit">
+        
     </form>
   </body>
 </html>
