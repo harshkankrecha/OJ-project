@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Submissions</title>
+    <style> 
+        .table tbody tr {
+            margin-bottom: 0;
+        }          
+    </style>
+  </head>
+  <body>
+    <!-- On rows -->
+    <table class="table table-sm table-borderless">
+  <thead>
+    <tr class="bg-dark" style="color:white;font-family:Consolas;font-size: 20px;
+    font-weight: bold;">
+      <th scope="col">#</th>
+      <th scope="col">User</th>
+      <th scope="col">Problem</th>
+      <th scope="col">Result</th>
+      <th scope="col">Submitted At</th>
+    </tr>
+  </thead>
+<tbody>
+    {% for sol in solutions %} 
+        {% if sol.verdict == "Accepted" %}       
+        <tr class="bg-success" style="color:white;font-family:Consolas;font-size: 18px;
+        font-weight: bold;">
+        <th scope="row">{{sol.solution_id}}</th>
+        <td>{{sol.user.username}}</td>
+        <td>{{sol.problem.name}}</td>
+        <td>{{sol.verdict}}</td>
+        <td>{{sol.submitted_at}}</td>
+        </tr>        
+        {% else %}
+        <tr class="bg-danger" style="color:white;font-family:Consolas;font-size: 18px;
+        font-weight: bold;">
+            <th scope="row">{{sol.solution_id}}</th>
+            <td>{{sol.user.username}}</td>
+            <td>{{sol.problem.name}}</td>
+            <td>{{sol.verdict}}</td>
+            <td>{{sol.submitted_at}}</td>
+        </tr> 
+        {% endif %}
+    {% endfor %} 
+</tbody>
+</table>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+

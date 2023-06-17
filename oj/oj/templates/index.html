@@ -1,0 +1,11 @@
+{% load static %}
+<p>This is problems page</p>
+{%if problems_list%}
+    <ol>
+        {%for problem in problems_list%}
+            <li><a href="{% url 'judge:problem_detail' problem.id %}">{{problem.name}}</a></li>
+        {%endfor%}
+    </ol>
+{%else%}
+    <p>No problems are available</p>
+{% endif %}
