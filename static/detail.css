@@ -1,0 +1,152 @@
+.detail-section{
+    margin-left: 0px;
+    padding-left:0px;
+}
+#problem-statement{
+    font-family:"Calibri";
+    font-size:21px;   
+}
+#problem-heading{
+    font-family:"Calibri";
+    font-size:24px;    
+}
+.sample-input{
+    font-family:"Calibri";    
+}
+.bg-data{
+    background-color: #EEFAFF;
+    padding-left:20px;
+    padding-top:8px;
+    padding-bottom:8px;    
+}
+.submit-button{
+    height: 40px;
+	width: 100px;
+	border-radius: 50px;
+    color:white;
+	background-color:#5D75FC;
+	font-size: 19px;
+	border: none;
+	cursor: pointer;    
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    
+}
+.submit-button{
+    box-shadow: 11px 8px 9px 2px rgba(0,0,0,0.2)
+}
+#solution {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+     
+    /*display: block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;*/
+
+.file-input {
+    display: flex;
+    align-items: center;
+  }
+.file-label:hover {
+    background-color: #5D75FC;
+    color:white;
+    
+    
+}
+  
+.file-label {
+    cursor: pointer;
+    color:#5D75FC;   
+    align-items: center;    
+    border-radius: 50px;
+    cursor: pointer; 
+    height: 40px;
+	width: 150px; 
+    font-size: 19px;
+	border: none;
+	cursor: pointer;    
+    display: inline-block;
+    vertical-align: middle;
+    padding-left:15px;
+    padding-right:13px;
+    padding-top:6px;
+    padding-bottom:3px;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }  
+
+  
+  
+  
+  /* Responsive Styling */
+  
+@media only screen and (max-width: 600px) {
+    .file-input {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .file-label {
+      margin-bottom: 5px;
+    }
+  }
+#my-submission-button{
+    height: 40px;
+	width: 180px;
+	border-radius: 10px;
+    color:white;
+	background-color:#48CBFA;
+	font-size: 19px;
+	border: none;
+	cursor: pointer;    
+    display: inline-block;
+    vertical-align: middle;    
+    margin-bottom: 6px;
+}
+#all-submission-button{
+    height: 40px;
+	width: 180px;
+	border-radius: 10px;
+    color:white;
+	
+    background-color:#48CBFA;
+	font-size: 19px;
+	border: none;
+	cursor: pointer;    
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
+    margin-bottom: 6px;
+}
+#editorial-button{
+    height: 40px;
+	width: 120px;
+	border-radius: 10px;
+    color:white;
+	background-color:#5D75FC;
+	font-size: 19px;
+	border: none;
+	cursor: pointer;    
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:25px;
+    margin-bottom: 6px;
+}
+

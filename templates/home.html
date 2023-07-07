@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../static/home.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </head>
+  <title>Home</title>
+  <body>
+    <nav class="nav-card navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src='../static/logo.png' class="logo"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="navs-item-style nav-item active">
+            <a class="nav-link" id="navItem1" href="#">Blogs <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="navs-item-style nav-item">
+            <a class="navs-item-style nav-link" id="navItem2" href="/contests">Contest</a>
+          </li>
+          <li class="nav-item">
+            <a class="navs-item-style nav-link" id="navItem3" href="/logout">Logout</a>
+          </li>          
+        </ul>
+      </div>
+    </nav>    
+    <div class="explore-menu-section pt-5 pb-5 mt-5 ml-0">
+      <div class="container">
+        <div class="row">     
+          <div class="col-12 mt-5">
+            <div class='console-container '><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+          </div>     
+          <div class="col-12 col-md-12 col-lg-4 mt-4">
+            <div class="shadow menu-item-card p-3 mb-3">
+              <img
+                src="../static/dsa.png"
+                class="menu-item-image w-100"
+              />
+              <h1 class="menu-card-title">Data Structures and Algorithms</h1>
+              <a href="/judge/problems/" class="menu-item-link">
+                Explore
+                <svg width="32px" height="32px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#5D75FC" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4 mt-4">
+            <div class="shadow menu-item-card p-3 mb-3">
+              <img
+                src="../static/cp.jpg"
+                class="menu-item-image w-100"
+              />
+
+              <h1 class="menu-card-title">Competitive Programming</h1>
+              <a href="/judge/problems/" class="menu-item-link">
+                Explore
+                <svg width="32px" height="32px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#5D75FC" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4 mt-4">
+            <div class="menu-item-card shadow p-3 mb-3">
+              <img
+                src="../static/python3.jpg"
+                class="menu-item-image w-100"
+              />
+              <h1 class="menu-card-title">Python</h1>
+              <a href="/judge/problems/" class="menu-item-link">
+                Explore
+                <svg width="32px" height="32px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#5D75FC" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>       
+          
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id="jsonData" data-json="{{ user_json }}"></div>
+  <script src="../static/home.js"></script>  
+  
+  </body>
+</html>
