@@ -1,0 +1,113 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0">
+	<title>CodeMaster</title>
+	<link rel="stylesheet" href="{% static 'login.css' %}">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<body>
+	<header>
+		<h1 class="heading">CodeMaster</h1>
+		<h3 class="title"></h3>
+	</header>    
+	<!-- container div -->
+	<div class="container">
+		<!-- upper button section to select
+			the login or signup form -->
+		<div class="slider"></div>		
+		<div class="btn">
+			<button class="login">SignIn</button>
+			<button class="signup">SignUp</button>
+		</div>
+		<!-- Form section that contains the
+			login and the signup form -->
+		<div class="" style="text-align:center;margin-bottom:2px;">			
+		</div>
+		<div class="form-section">			
+			<!-- login form -->
+            <form action="/" method="post">
+                {% csrf_token %}
+				<div class="login-box">
+				
+						{% if messages %}    					
+        				{% for message in messages %}
+            			<p{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color:#FF2400">
+							{{ message }}
+						</p>
+        				{% endfor %}    					
+						{% endif %}
+					
+					<input type="text"
+						class="email ele"
+						placeholder="Username"
+						name="username" required>                    
+					<input type="password"
+						class="password ele"
+						placeholder="Password"
+						name="password" required>
+	
+						
+					<button type="submit" class="clkbtn">SignIn</button>
+					<p>OR</p>
+					<a href="{% provider_login_url 'google' %}">
+						<div class="google-btn">
+							<div class="google-icon-wrapper">
+							  <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+							</div>
+							<p class="btn-text" style="font-weight:bold;">Signin with google</p>
+						  </div>
+					</a>	
+				</div>
+            </form>
+			<!-- signup form -->
+            <form action="/" method="post">
+                {% csrf_token %}
+			<div class="signup-box">
+				<input type="text"
+					class="name ele"
+					placeholder="First Name"
+                    name="first_name" required>
+                
+                <input type="text"
+					class="name ele"
+					placeholder="Last Name"
+                    name="last_name" required>
+
+                <input type="text"
+					class="name ele"
+					placeholder="Username"
+                    name="username" required>
+                    
+				
+				<input type="password"
+					class="password ele"
+					placeholder="Password"
+                    name="password1" required>
+				<input type="password"
+					class="password ele"
+					placeholder="Confirm password"
+                    name="password2" required>
+					
+						
+				<button type="submit" class="clkbtn">SignUp</button>
+				<p>OR</p>
+				<a href="{% provider_login_url 'google' %}">
+					<div class="google-btn">
+						<div class="google-icon-wrapper">
+						  <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+						</div>
+						<p class="btn-text" style="font-weight:bold;">Signup with google</p>
+					  </div>
+				</a>	
+			</div>
+            </form>
+		</div>
+	</div>
+	<script src="{% static 'login.js' %}"></script>
+</body>
+</html>
